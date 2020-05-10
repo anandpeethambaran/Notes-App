@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/anandtp00/node_files/issues"
   },
-  "homepage": "https://github.com/anandtp00/node_files#readme"
+  "homepage": "https://github.com/anandtp00/node_files#readme",
+  "dependencies": {
+    "validator": "^13.0.0"
+  }
 }
