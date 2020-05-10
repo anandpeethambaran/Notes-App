@@ -1,11 +1,13 @@
 const fs=require('fs');
 
+const util=require('./util');
+
 
 // fs.writeFileSync('notes.txt','The first file');
 
 // fs.appendFileSync('notes.txt',' Appending extra content');
 
 
-var outp=fs.readFileSync('notes.txt');
+// var outp=fs.readFileSync('notes.txt');
 
-console.log(outp);
+console.log(util.name,util.place);
