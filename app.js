@@ -1,6 +1,7 @@
 const fs=require('fs');
 
 const validator=require('validator');
+const chalk=require('chalk');
 
 
 const util=require('./util');
@@ -15,5 +16,7 @@ const util=require('./util');
 
 const email="anand";
 console.log(validator.isEmail(email));
+
+console.log(chalk.bold.blue("Success"));
 
 console.log(util.getnotes());

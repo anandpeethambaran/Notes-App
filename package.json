@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/anandtp00/node_files#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "validator": "^13.0.0"
   }
 }
