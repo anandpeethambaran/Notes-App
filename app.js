@@ -10,4 +10,4 @@ const util=require('./util');
 
 // var outp=fs.readFileSync('notes.txt');
 
-console.log(util.name,util.place);
+console.log(util.getnotes());

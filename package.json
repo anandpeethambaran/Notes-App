@@ -1,0 +1,19 @@
+{
+  "name": "files-project",
+  "version": "1.0.0",
+  "description": "notes app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandtp00/node_files.git"
+  },
+  "author": "Anand T P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anandtp00/node_files/issues"
+  },
+  "homepage": "https://github.com/anandtp00/node_files#readme"
+}
