@@ -19,6 +19,8 @@ const saveNotes = (notes)=>{
 }
 
 
+
+
 module.exports = {
 
     addNotes: (title, body, author) => {
@@ -43,7 +45,13 @@ module.exports = {
        
         console.log(allNotes);
     },
-    removeNotes: () => {
+    removeNotes: (title) => {
+        const existingnotes=getNotes();
 
+        const notesRE=existingnotes.filter((note)=>{
+            return note.title!==title
+        })
+
+        saveNotes(notesRE)
     }
 }
