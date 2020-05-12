@@ -1,5 +1,6 @@
 const yarg = require('yargs')
 const fs = require('fs')
+const chalk = require('chalk');
 
 
 const getNotes = () => {
@@ -52,6 +53,12 @@ module.exports = {
             return note.title!==title
         })
 
-        saveNotes(notesRE)
+        if(notesRE.length<existingnotes.length){
+            saveNotes(notesRE)
+            console.log(chalk.green.inverse('Note removed'))
+        }else{
+            console.log(chalk.red.inverse('No notes available'))
+        }
+      
     }
 }
