@@ -2,6 +2,9 @@ const validator = require('validator');
 const chalk = require('chalk');
 const yargs = require('yargs');
 
+
+const notes=require('./notes');
+
 //notes app using command line argument
 
 //using yargs we are creating different options as commands
@@ -22,12 +25,15 @@ yargs.command({
             describe:'note body',
             demandOption:true,
             type:'string'
+        },
+        author:{
+            describe:'Autor Name',
+            demandOption:true,
+            type:'string'
         }
     },
     handler: (argv)=>{
-        console.log('Adding a new note')
-        console.log('Title:', argv.title)
-        console.log('Body:', argv.body)
+       notes.addNotes(argv.title,argv.body,argv.author);
     }
 })
 
