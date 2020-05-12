@@ -24,16 +24,23 @@ module.exports = {
     addNotes: (title, body, author) => {
         const allNotes = getNotes()
 
-        allNotes.push({
-            title:title,
-            body:body,
-            author:author
+        const duplicate = allNotes.filter((note)=>{
+            return note.title === title
         })
 
-
+        if(duplicate.length ===0){
+            allNotes.push({
+                title:title,
+                body:body,
+                author:author
+            })
         saveNotes(allNotes)
-
-
+        console.log('adding new notes');
+        }
+        else{
+            console.log('note title already taken')
+        }
+       
         console.log(allNotes);
     },
     removeNotes: () => {
