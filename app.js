@@ -53,6 +53,30 @@ yargs.command({
 })
 
 
+yargs.command({
+    command:'list',
+    describe:'list all notes',
+    handler:(argv)=>{
+        notes.listNotes();
+    }
+})
+
+yargs.command({
+    command:'read',
+    describe:'read a note',
+    builder:{
+        title:{
+            describe:'note title',
+            demandOption:true,
+            type:'string'
+        }
+    },
+    handler:(argv)=>{
+        notes.readNote(argv.title);
+    }
+})
+
+
 
 yargs.parse();
 

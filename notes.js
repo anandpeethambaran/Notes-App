@@ -31,6 +31,11 @@ module.exports = {
             return note.title === title
         })
 
+        //another way to improve speed
+        // const dup = allNote.find((note)=>{
+        //     return note.title === title
+        // })
+
         if(duplicate.length ===0){
             allNotes.push({
                 title:title,
@@ -59,6 +64,30 @@ module.exports = {
         }else{
             console.log(chalk.red.inverse('No notes available'))
         }
-      
+    },
+    listNotes:()=>{
+        const existingnotes=getNotes();
+        console.log(chalk.inverse('Your Notes'))
+
+        existingnotes.forEach(element => {
+            console.log('Title : ', element.title, ', Body : ',element.body);
+        });
+    },
+    readNote:(title)=>{
+
+        const existingnotes=getNotes();
+
+        const note=existingnotes.find((note)=>{
+            return note.title === title;
+        })
+
+        if(note){
+            console.log(chalk.inverse('Title : ',note.title));
+            console.log(chalk.inverse('Body : ',note.body));
+        }
+        else{
+            console.log(chalk.red.inverse('No note found'))
+        }
+
     }
 }
